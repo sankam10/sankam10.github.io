@@ -3,79 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name - Home</title>
+  <title>Sandip Kamat - Home</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
+    :root {
+      --primary: #2c3e50;
+      --accent: #1abc9c;
+      --bg: #f8fafc;
+      --card: #fff;
+      --text: #222;
+      --shadow: 0 4px 24px rgba(44,62,80,0.07);
     }
+    * { box-sizing: border-box; }
     body {
-      background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
+      background: var(--bg);
+      font-family: 'Inter', Arial, sans-serif;
+      color: var(--text);
+      margin: 0;
     }
     header {
-      background-color: #333;
-      color: white;
-      padding: 20px 0;
+      background: var(--primary);
+      color: #fff;
+      padding: 40px 0 20px 0;
       text-align: center;
+      box-shadow: var(--shadow);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.85;
+    }
+    nav {
+      background: #fff;
+      box-shadow: var(--shadow);
     }
     nav ul {
-      list-style: none;
       display: flex;
       justify-content: center;
-      background-color: #444;
+      padding: 0.5rem 0;
+      list-style: none;
+      margin: 0;
     }
     nav ul li {
-      margin: 0 15px;
+      margin: 0 22px;
     }
     nav ul li a {
-      color: white;
+      color: var(--primary);
       text-decoration: none;
-      padding: 15px 0;
-      display: block;
+      font-weight: 500;
+      font-size: 1.08rem;
+      transition: color 0.2s;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
     }
     nav ul li a:hover {
-      text-decoration: underline;
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
     }
     .container {
-      max-width: 900px;
-      margin: 40px auto;
+      max-width: 750px;
+      margin: 40px auto 0 auto;
       padding: 0 20px;
+    }
+    .card {
+      background: var(--card);
+      box-shadow: var(--shadow);
+      border-radius: 14px;
+      padding: 36px 28px;
+      margin-bottom: 32px;
     }
     .profile {
       text-align: center;
     }
     .profile img {
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
-      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.12);
+      margin-bottom: 18px;
+      object-fit: cover;
+    }
+    .profile h2 {
+      margin: 10px 0 6px 0;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .profile p {
+      font-size: 1.08rem;
+      color: #444;
+      margin-bottom: 12px;
+    }
+    .social-links {
+      margin-top: 8px;
     }
     .social-links a {
+      display: inline-block;
       margin: 0 10px;
+      color: var(--accent);
+      font-size: 1.2rem;
       text-decoration: none;
+      transition: color 0.2s;
+      font-weight: 600;
+    }
+    .social-links a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+    .section h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .section p, .section ul {
+      font-size: 1.05rem;
       color: #333;
     }
-    .section {
-      margin-top: 40px;
+    .section ul {
+      padding-left: 22px;
+      margin-top: 8px;
     }
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #333;
-      color: white;
+      padding: 24px 0;
+      background: var(--primary);
+      color: #fff;
+      font-size: 1rem;
       margin-top: 60px;
+      box-shadow: var(--shadow);
+      border-radius: 0 0 14px 14px;
+    }
+    @media (max-width: 600px) {
+      .container, .card { padding: 12px; }
+      nav ul li { margin: 0 8px; }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Your Name</h1>
-    <p>Welcome to my personal website</p>
+    <h1>Sandip Kamat</h1>
+    <p>Welcome to my professional website</p>
   </header>
 
   <nav>
@@ -88,39 +160,38 @@
   </nav>
 
   <div class="container">
-    <div class="profile">
-      <img src="your-photo.jpg" alt="Your Photo" />
-      <h2>Your Name</h2>
-      <p>A short bio about who you are and what you do.</p>
+    <div class="card profile">
+      <img src="your-photo.jpg" alt="Sandip Kamat" />
+      <h2>Sandip Kamat</h2>
+      <p>A short bio describing your experience, focus, or personal tagline.</p>
       <div class="social-links">
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
-        <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/sankam10" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/sandip" target="_blank">LinkedIn</a>
         <a href="mailto:your@email.com">Email</a>
       </div>
     </div>
 
-    <div id="about" class="section">
+    <div id="about" class="card section">
       <h3>About Me</h3>
-      <p>Write a paragraph about your background, skills, and interests.</p>
+      <p>Write a paragraph about your background, skills, and interests. Highlight your expertise, passions, and what sets you apart.</p>
     </div>
 
-    <div id="projects" class="section">
+    <div id="projects" class="card section">
       <h3>Projects</h3>
       <ul>
-        <li>Project One – A brief description of this project.</li>
-        <li>Project Two – A brief description of this project.</li>
+        <li><b>Project One:</b> Brief description of an impressive project.</li>
+        <li><b>Project Two:</b> Brief description of another project.</li>
       </ul>
     </div>
 
-    <div id="contact" class="section">
+    <div id="contact" class="card section">
       <h3>Contact</h3>
       <p>You can reach me at <a href="mailto:your@email.com">your@email.com</a>.</p>
     </div>
   </div>
 
   <footer>
-    <p>© 2025 Your Name. All rights reserved.</p>
+    <p>© 2025 Sandip Kamat. All rights reserved.</p>
   </footer>
-
 </body>
 </html>

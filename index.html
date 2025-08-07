@@ -100,16 +100,23 @@
       border-radius: 24px;
       margin-bottom: 40px;
       position: relative;
+      padding-top: 32px;
+      padding-bottom: 32px;
     }
     .profile img {
       width: 124px;
       height: 124px;
+      max-width: 100%;
       border-radius: 50%;
       box-shadow: 0 2px 12px rgba(44,62,80,0.16);
       margin-bottom: 18px;
       object-fit: cover;
       border: 4px solid var(--accent2);
       transition: border-color 0.3s;
+      background: #e0f7fa;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     .profile img:hover {
       border-color: var(--accent);
@@ -178,6 +185,9 @@
       .profile img { width: 90px; height: 90px; }
       .card { padding: 18px 8px; }
     }
+    @media (max-width: 400px) {
+      .profile img { width: 70px; height: 70px; }
+    }
   </style>
 </head>
 <body>
@@ -198,6 +208,7 @@
 
   <div class="container">
     <div class="card profile">
+      <img src="your-photo.jpg" alt="Sandip Kamat profile photo" />
       <p> Technology. Products. Culture. </p>
       <div class="social-links">
         <a href="https://www.linkedin.com/in/sandip" target="_blank">LinkedIn</a>
@@ -228,8 +239,8 @@
       <h3> Talks & Demos </h3>
       <ul>
         <li><a href="https://www.youtube.com/watch?v=D0WF5N95ddg" target="_blank">  TEDx Talk - Launching Global Products (2021, COEP) </a>  <br> <br> </li>
-        <li><a href="https://www.linkedin.com/posts/ketalg_iotisateamsport-retailpayments-softpos-activity-6984198582618775552-D8bx" target="_blank">  Panel "Retail and Payment Trends  & Innovations" (2023, Qualcomm) </a>  <br> <br> </li>
-        <li><a href="https://www.linkedin.com/posts/sandip_productmarketing-ai-artificialintelligence-activity-7335668009513967616-iQFG" target="_blank"> Panel "AI in Product Management" (2025, UCSD Rady School of Management) </a>  <br> <br> </li>     
+        <li><a href="https://www.linkedin.com/posts/ketalg_iotisateamsport-retailpayments-softpos-activity-6984198582618775552-D8bx" target="_blank">  Panel "Retail and Payment Trends  & Innovations" [...]</a></li>
+        <li><a href="https://www.linkedin.com/posts/sandip_productmarketing-ai-artificialintelligence-activity-7335668009513967616-iQFG" target="_blank"> Panel "AI in Product Management" (2025, UCSD R[...]</a></li>
         <li><a href="https://www.youtube.com/watch?v=zUXDKRK3tM4" target="_blank">  Managing Retail Inventory with AI Cameras (2023, HP) </a>  <br> <br> </li>
         <li><a href="https://www.youtube.com/watch?v=glZyKG6jcxw" target="_blank">  HP EdgeX Foundry Use Case (2020, HP) </a>  <br> <br> </li>
         <li><a href="https://ossna2020.sched.com/speaker/sandip_kamat.215ases0" target="_blank">  Linux Foundation Open Source Summit (2020, The Linux Foundation) </a>  <br> <br> </li>
@@ -247,7 +258,7 @@
 
     <div id="contact" class="card section">
       <h3>Contact</h3>
-      <p> Follow me on X at <a href="http://www.X.com/@sankam" </a> @sankam </p>
+      <p> Follow me on X at <a href="http://www.X.com/@sankam">@sankam</a> </p>
     </div>
   </div>
 

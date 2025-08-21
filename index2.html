@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Custom ADK Chat</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    #chat { border: 1px solid #ccc; padding: 10px; height: 400px; overflow-y: scroll; }
+    #userInput { width: 80%; }
+  </style>
+</head>
+<body>
+  <h2>My ADK Agent</h2>
+  <div id="chat"></div>
+  <input type="text" id="userInput" placeholder="Ask something...">
+  <button onclick="sendMessage()">Send</button>
+
+  <script>
+    async function sendMessage() {
+      const input = document.getElementById('userInput').value;
+      if(!input) return;
+      const chat = document.getElementById('chat');
+      chat.innerHTML += `<div><b>You:</b> ${input}</div>`;
+
+      const response = await fetch('http://localhost:8000/ask', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: input })
+      });
+
+      const data = await response.json();
+      chat.innerHTML += `<div><b>Agent:</b> ${data.result || data.report || JSON.stringify(data)}</div>`;
+      document.getElementById('userInput').value = '';
+      chat.scrollTop = chat.scrollHeight;
+    }
+  </script>
+</body>
+</html>
